@@ -33,6 +33,8 @@ dependencies = [
     "pandas",
     "feedparser",
     "pyyaml>=6.0.3",
+    "beautifulsoup4>=4.15.0",
+    "lxml>=6.1.1",
 ]
 
 [project.urls]
@@ -232,6 +234,8 @@ allow-magic-value-types = ["int", "str", "bytes"]
     "SLF001",  # private-member-access (fine in tests)
     "S101",    # assert (pytest's entry point)
     "S106",    # hardcoded-password-func-arg (fixtures)
+    "ARG001",  # unused-arguments (common in mocks and fixtures)
+    "TC003",   # typing-only-standard-library-import (pytest fixtures need runtime)
     "PLR0911", # too-many-return-statements
     "PLR0912", # too-many-branches
     "PLR0913", # too-many-arguments (parametrized fixtures)
@@ -342,6 +346,7 @@ filterwarnings = [
     "error",
     "ignore::DeprecationWarning:pydantic.*",
     "ignore:Module already imported.*:pytest.PytestAssertRewriteWarning",
+    "ignore::starlette.exceptions.StarletteDeprecationWarning",
 ]
 
 # ============================================================================

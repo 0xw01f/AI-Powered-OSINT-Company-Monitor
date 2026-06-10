@@ -42,4 +42,47 @@ NCC Group,https://research.nccgroup.com/category/threat-intelligence/feed/,secur
 SANS ISC,https://isc.sans.edu/rssfeed.xml,security,en
 Unit42,https://unit42.paloaltonetworks.com/feed/,security,en
 MSRC Security Update,https://api.msrc.microsoft.com/update-guide/rss,security,en
+SecurityWeek,https://www.securityweek.com/feed/,security,en
+PortSwigger,https://portswigger.net/daily-swig/rss,security,en
+CSO Online,https://www.csoonline.com/news/feed/,security,en
+Google Security Blog,https://security.googleblog.com/feeds/posts/default,security,en
+Cloudflare Blog,https://blog.cloudflare.com/rss/,security,en
+GitGuardian,https://blog.gitguardian.com/rss.xml,security,en
+Mandiant,https://www.mandiant.com/resources/blog/rss.xml,security,en
+Mozilla Security,https://blog.mozilla.org/security/feed/,security,en
+F5 Labs,https://www.f5.com/labs/articles/feed,security,en
+CERT-EU Threat Intel,https://cert.europa.eu/publications/threat-intelligence-rss,security,en
+CERT-EU Advisories,https://cert.europa.eu/publications/security-advisories-rss,security,en
+JPCERT,https://www.jpcert.or.jp/english/rss/jpcert-en.rdf,security,en
+Canadian Cyber Security,https://cyber.gc.ca/webservice/en/rss/alerts,security,en
+Bellingcat,https://www.bellingcat.com/feed/,osint,en
+Shadowserver,https://blog.shadowserver.org/feed/,osint,en
+CIRCL,https://www.circl.lu/rss/,osint,en
 TechCrunch,https://techcrunch.com/feed/,tech,en
+The Verge,https://www.theverge.com/rss/index.xml,tech,en
+Wired,https://www.wired.com/feed/rss,tech,en
+Ars Technica,https://feeds.arstechnica.com/arstechnica/index,tech,en
+Engadget,https://www.engadget.com/rss.xml,tech,en
+ZDNet,https://www.zdnet.com/news/rss.xml,tech,en
+Mashable,https://feeds.mashable.com/Mashable,tech,en
+Presse-Citron,https://www.presse-citron.net/feed/,tech,fr
+Korben,https://korben.info/feed,tech,fr
+Journal du Geek,https://www.journaldugeek.com/feed/,tech,fr
+FrenchWeb,https://www.frenchweb.fr/feed,tech,fr
+Usine Digitale,https://www.usine-digitale.fr/rss,tech,fr
+Frandroid,https://www.frandroid.com/feed,tech,fr
+01Net,https://www.01net.com/feed,tech,fr
+Maddyness,https://www.maddyness.com/feed/,tech,fr
+ZDNet FR,https://www.zdnet.fr/feed/,tech,fr
+Le Monde Economie,https://www.lemonde.fr/economie/rss_full.xml,business,fr
+La Tribune,https://www.latribune.fr/rss,business,fr
+BFM Business,https://www.bfmtv.com/rss/entreprises/,business,fr
+Les Echos,https://www.lesechos.fr/rss,business,fr
+Capital,https://www.capital.fr/rss.xml,business,fr
+L'Opinion,https://www.lopinion.fr/rss.xml,business,fr
+Reuters Business,https://www.reutersagency.com/feed/?taxonomy=markets&post_type=reuters-best,business,en
+BBC Business,http://feeds.bbci.co.uk/news/business/rss.xml,business,en
+WSJ Markets,https://feeds.a.dj.com/rss/RSSMarketsMain.xml,business,en
+Foreign Policy,https://www.foreignpolicy.com/feed/,geopolitics,en
+Crisis Group,https://www.crisisgroup.org/rss,geopolitics,en
+RFI,https://www.rfi.fr/en/rss,geopolitics,en

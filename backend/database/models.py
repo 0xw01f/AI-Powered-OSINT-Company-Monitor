@@ -88,3 +88,32 @@ class MonitoredCompany(Base):
         server_default=func.now(),
         nullable=False,
     )
+
+
+class Source(Base):
+    """RSS or Atom source for article collection."""
+
+    __tablename__ = 'sources'
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(Text, nullable=False)
+    url: Mapped[str] = mapped_column(Text, unique=True, nullable=False)
+    category: Mapped[str | None] = mapped_column(Text)
+    language: Mapped[str | None] = mapped_column(Text)
+    domain: Mapped[str | None] = mapped_column(Text)
+    subdomain: Mapped[str | None] = mapped_column(Text)
+    source_type: Mapped[str | None] = mapped_column(Text)
+    country: Mapped[str | None] = mapped_column(Text)
+    geographic_scope: Mapped[str | None] = mapped_column(Text)
+    reliability: Mapped[int | None] = mapped_column()
+    priority: Mapped[int | None] = mapped_column()
+    update_frequency: Mapped[str | None] = mapped_column(Text)
+    entity_focus: Mapped[str | None] = mapped_column(Text)
+    rss_available: Mapped[bool] = mapped_column(default=True)
+    active: Mapped[bool] = mapped_column(default=True)
+    tags: Mapped[str | None] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False,
+    )

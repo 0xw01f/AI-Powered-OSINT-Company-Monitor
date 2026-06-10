@@ -8,6 +8,7 @@ from fastapi import Depends, FastAPI
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
+from backend.api import router
 from backend.database import get_db, init_db
 
 
@@ -22,6 +23,7 @@ app = FastAPI(
     title='AI-Powered OSINT Company Monitor',
     lifespan=lifespan,
 )
+app.include_router(router)
 
 
 @app.get('/')

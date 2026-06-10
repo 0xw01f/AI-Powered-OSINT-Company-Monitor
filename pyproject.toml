@@ -24,6 +24,14 @@ classifiers = [
 
 dependencies = [
     "pydantic>=2.13.4",
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "playwright",
+    "openai",
+    "pandas",
+    "feedparser",
 ]
 
 [project.urls]
@@ -41,7 +49,6 @@ dev = [
     "ruff",
     "yamllint",
     "mdformat",
-    "gitlint",
     "pre-commit>=4.6.0",
     # Tests
     "pytest",

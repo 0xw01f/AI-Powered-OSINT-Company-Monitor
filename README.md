@@ -1,71 +1,69 @@
-# Python Project Template
+# AI-Powered OSINT Company Monitor
 
-A professional, batteries-included template for Python projects.
+A platform that automatically monitors a company and produces actionable summaries from public data.
 
-Click **"Use this template"** on GitHub to bootstrap a new repository.
-
-## What's inside
+## Stack
 
 | Tool | Purpose |
 | --- | --- |
 | [uv](https://docs.astral.sh/uv/) | Fast dependency & virtualenv management |
-| [Hatchling](https://hatch.pypa.io/) | PEP 517 build backend |
-| [Ruff](https://docs.astral.sh/ruff/) | Linter + formatter (strict, ~40 rule families enabled) |
-| [Mypy](https://mypy.readthedocs.io/) | Static type checking (strict mode) |
-| [Pytest](https://docs.pytest.org/) | Test runner (+ coverage, asyncio, benchmark, xdist, mock, timeout, dotenv) |
+| [FastAPI](https://fastapi.tiangolo.com/) | Web framework |
+| [SQLAlchemy](https://www.sqlalchemy.org/) | ORM |
+| [PostgreSQL](https://www.postgresql.org/) | Database |
+| [Playwright](https://playwright.dev/python/) | Web scraping |
+| [OpenAI](https://platform.openai.com/) | AI analysis |
+| [pandas](https://pandas.pydata.org/) | Data manipulation |
+| [feedparser](https://pypi.org/project/feedparser/) | RSS feed parsing |
+| [Ruff](https://docs.astral.sh/ruff/) | Linter + formatter |
+| [Mypy](https://mypy.readthedocs.io/) | Static type checking |
+| [Pytest](https://docs.pytest.org/) | Test runner |
 | [pre-commit](https://pre-commit.com/) | Git hooks orchestration |
-| [gitlint](https://jorisroovers.github.io/gitlint/) | Conventional Commits enforcement |
-| [yamllint](https://yamllint.readthedocs.io/) | YAML linting |
-| [mdformat](https://mdformat.readthedocs.io/) | Markdown formatting |
-| [gitleaks](https://github.com/gitleaks/gitleaks) | Secret detection |
 
 ## Requirements
 
 - Python **3.13+**
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
+- Docker & Docker Compose (for PostgreSQL)
 
 ## Getting started
 
-After creating your repo from this template:
-
 ```sh
-# 1. Rename the `app` package to your project name
-#    - rename the `app/` directory
-#    - update `[project].name`, `[project.scripts]`, `[tool.hatch.build.*]`,
-#      `[tool.mypy].files`, `[tool.coverage.run].source` in pyproject.toml
-#    - update the mypy hook `files:` pattern in .pre-commit-config.yaml
+# 1. Start PostgreSQL
+docker compose up -d
 
 # 2. Install dependencies and dev tools
 uv sync
 
-# 3. Install git hooks (pre-commit + commit-msg)
+# 3. Install git hooks
 uv run pre-commit install
 ```
 
 ## Daily commands
 
 ```sh
-uv run app-cli           # run the entry point
-uv run ruff check .      # lint
-uv run ruff format .     # format
-uv run mypy              # type-check
-uv run pytest            # tests
-uv run pytest --cov      # tests with coverage
+uv run fastapi dev backend/main.py   # run the API
+uv run ruff check .                  # lint
+uv run ruff format .                 # format
+uv run mypy                          # type-check
+uv run pytest                        # tests
+uv run pytest --cov                  # tests with coverage
 ```
 
 ## Layout
 
 ```text
 .
-├── app/                    # source package
-│   ├── __init__.py
-│   └── main.py
+├── backend/
+│   ├── app/           # source package
+│   ├── scrapers/      # web scrapers
+│   ├── services/      # business logic
+│   ├── database/      # DB models & sessions
+│   └── main.py        # FastAPI entry point
+├── frontend/          # dashboard (future)
 ├── tests/
 │   └── unit/
-├── .pre-commit-config.yaml
-├── .gitlint                # Conventional Commits config
-├── .yamllint.yaml
-├── pyproject.toml          # single source of truth (ruff, mypy, pytest, coverage)
+├── docker-compose.yml # PostgreSQL service
+├── pyproject.toml
 └── uv.lock
 ```
 

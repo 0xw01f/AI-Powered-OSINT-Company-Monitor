@@ -237,6 +237,7 @@ allow-magic-value-types = ["int", "str", "bytes"]
     "S101",    # assert (pytest's entry point)
     "S106",    # hardcoded-password-func-arg (fixtures)
     "ARG001",  # unused-arguments (common in mocks and fixtures)
+    "ARG002",  # unused-method-argument (common in mocks)
     "TC002",   # typing-only-third-party-import (pytest fixtures need runtime)
     "TC003",   # typing-only-standard-library-import (pytest fixtures need runtime)
     "PLR0911", # too-many-return-statements

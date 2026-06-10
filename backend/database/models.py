@@ -17,6 +17,7 @@ class ArticleStatus(enum.StrEnum):
 
     PENDING = 'pending'
     SCRAPED = 'scraped'
+    ANALYZED = 'analyzed'
     SUMMARIZED = 'summarized'
     ERROR = 'error'
 

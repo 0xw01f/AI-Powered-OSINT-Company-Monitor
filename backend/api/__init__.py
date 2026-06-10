@@ -1,5 +1,6 @@
 """API routes package."""
 
 from backend.api.routes import router
+from backend.api.sources import router as sources_router
 
-__all__ = ['router']
+__all__ = ['router', 'sources_router']

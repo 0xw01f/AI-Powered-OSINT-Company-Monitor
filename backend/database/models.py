@@ -74,3 +74,17 @@ class Entity(Base):
     type: Mapped[str] = mapped_column(String(50), nullable=False)
 
     article: Mapped[Article] = relationship(back_populates='entities')
+
+
+class MonitoredCompany(Base):
+    """Company explicitly watched by the user for alerts."""
+
+    __tablename__ = 'monitored_companies'
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(Text, unique=True, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False,
+    )

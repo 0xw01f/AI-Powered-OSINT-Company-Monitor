@@ -1,0 +1,45 @@
+name,url,category,language
+Intelligence Online,https://feeds.feedburner.com/IntelligenceOnline-fr,news,fr
+Africa Intelligence,https://feeds.feedburner.com/AfricaIntelligence-fr,news,fr
+La Lettre,https://feeds.feedburner.com/LaLettre-fr,news,fr
+Glitz,https://feeds.feedburner.com/glitz-fr,news,fr
+CTI-MS Teams Bot,https://github.com/JMousqueton/CTI-MSTEAMS-Bot/releases.atom,tools,en
+Graham Cluley,https://grahamcluley.com/feed/,security,en
+Threatpost,https://threatpost.com/feed/,security,en
+Krebs on Security,https://krebsonsecurity.com/feed/,security,en
+Dark Reading,https://www.darkreading.com/rss.xml,security,en
+DaVinci Forensics,https://davinciforensics.co.za/cybersecurity/feed/,security,en
+Cisco Security,https://blogs.cisco.com/security/feed,security,en
+Infosecurity Magazine,https://www.infosecurity-magazine.com/rss/news/,security,en
+Google TAG,https://blog.google/threat-analysis-group/rss/,security,en
+Trend Micro,http://feeds.trendmicro.com/TrendMicroResearch,security,en
+Bleeping Computer,https://www.bleepingcomputer.com/feed/,security,en
+Proof Point,https://www.proofpoint.com/us/rss.xml,security,en
+The Hacker News,http://feeds.feedburner.com/TheHackersNews?format=xml,security,en
+Schneier on Security,https://www.schneier.com/feed/atom/,security,en
+Binary Defense,https://www.binarydefense.com/feed/,security,en
+Securelist,https://securelist.com/feed/,security,en
+Checkpoint Research,https://research.checkpoint.com/feed/,security,en
+VirusBulletin,https://www.virusbulletin.com/rss,security,en
+Modexp,https://modexp.wordpress.com/feed/,security,en
+James Forshaw,https://www.tiraniddo.dev/feeds/posts/default,security,en
+Adam Chester,https://blog.xpnsec.com/rss.xml,security,en
+Microsoft Security,https://msrc-blog.microsoft.com/feed/,security,en
+Recorded Future,https://www.recordedfuture.com/feed,security,en
+SentinelOne,https://www.sentinelone.com/feed/,security,en
+RedCanary,https://redcanary.com/feed/,security,en
+Cyber-News,https://cyber-news.fr/feed/atom?,security,fr
+Leak-Lookup,https://leak-lookup.com/rss,security,en
+AT&T Cybersecurity,https://cybersecurity.att.com/site/blog-all-rss,security,en
+US-CERT CISA,https://www.cisa.gov/uscert/ncas/alerts.xml,security,en
+NCSC UK,https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml,security,en
+Center of Internet Security,https://www.cisecurity.org/feed/advisories,security,en
+FR-CERT Alertes,https://cert.ssi.gouv.fr/alerte/feed/,security,fr
+FR-CERT Avis,https://cert.ssi.gouv.fr/avis/feed/,security,fr
+EU-ENISA,https://www.enisa.europa.eu/publications/RSS,security,en
+Microsoft Sentinel,https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8149516204242144484&board=MicrosoftSentinelBlog&size=25,security,en
+NCC Group,https://research.nccgroup.com/category/threat-intelligence/feed/,security,en
+SANS ISC,https://isc.sans.edu/rssfeed.xml,security,en
+Unit42,https://unit42.paloaltonetworks.com/feed/,security,en
+MSRC Security Update,https://api.msrc.microsoft.com/update-guide/rss,security,en
+TechCrunch,https://techcrunch.com/feed/,tech,en

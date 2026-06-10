@@ -32,6 +32,7 @@ dependencies = [
     "openai",
     "pandas",
     "feedparser",
+    "pyyaml>=6.0.3",
 ]
 
 [project.urls]
@@ -62,6 +63,7 @@ dev = [
     # Type stubs
     "types-requests",
     "types-jsonschema",
+    "types-pyyaml>=6.0.12.20260518",
 ]
 
 # ============================================================================
@@ -69,10 +71,10 @@ dev = [
 # ============================================================================
 
 [tool.hatch.build.targets.sdist]
-include = ["app"]
+include = ["app", "backend"]
 
 [tool.hatch.build.targets.wheel]
-include = ["app"]
+include = ["app", "backend"]
 
 # ============================================================================
 # RUFF (linter + formatter)
@@ -93,6 +95,7 @@ unfixable = ["F841"]
 ignore = [
     # ---- Style / preference ----
     "UP015",  # redundant-open-modes
+    "UP017",  # datetime.UTC alias (mypy 2.1 compatibility)
     "E501",   # line-too-long (handled by the formatter)
     "PYI041", # redundant-numeric-union
     "SIM103", # needless-bool
@@ -261,6 +264,9 @@ allow-magic-value-types = ["int", "str", "bytes"]
     "INP001", # implicit-namespace-package (scripts without __init__.py)
     "T20",    # print is fine in CLI scripts
 ]
+"backend/database/models.py" = [
+    "TC003", # datetime needed at runtime for SQLAlchemy Mapped annotations
+]
 "**/migrations/*" = [
     "INP001", # Alembic is a set of scripts
     "S608",   # SQL migrations
@@ -273,7 +279,7 @@ allow-magic-value-types = ["int", "str", "bytes"]
 
 [tool.mypy]
 python_version     = "3.13"
-files              = ["app", "tests"]
+files              = ["app", "backend", "tests"]
 namespace_packages = true
 pretty             = true
 show_error_codes   = true
@@ -306,6 +312,10 @@ exclude = [
 [[tool.mypy.overrides]]
 module                = "tests.*"
 disallow_untyped_defs = false
+
+[[tool.mypy.overrides]]
+module = ["feedparser.*"]
+ignore_missing_imports = true
 
 # ============================================================================
 # PYTEST
@@ -342,7 +352,7 @@ filterwarnings = [
 [tool.coverage.run]
 parallel = true
 branch   = true
-source   = ["app"]
+source   = ["app", "backend"]
 omit     = ["**/*_test.py", "**/test_*.py", "**/tests/**"]
 
 [tool.coverage.report]

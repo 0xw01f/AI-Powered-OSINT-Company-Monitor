@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import enum
-from typing import TYPE_CHECKING
+from datetime import datetime
 
 from sqlalchemy import DateTime, Enum, ForeignKey, String, Text
 from sqlalchemy.dialects.postgresql import JSONB
@@ -11,9 +11,6 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
 
 from backend.database.base import Base
-
-if TYPE_CHECKING:
-    from datetime import datetime
 
 
 class ArticleStatus(enum.StrEnum):

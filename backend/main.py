@@ -8,15 +8,22 @@ from fastapi import Depends, FastAPI
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from backend.api import router
+from backend.api import router, sources_router
 from backend.database import get_db, init_db
+from backend.database.session import SessionLocal
 from backend.scheduler import start_scheduler, stop_scheduler
+from backend.services.sources import import_sources_from_csv
 
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncGenerator[None]:
-    """Initialize database tables and background scheduler on startup."""
+    """Initialize database tables, seed sources and start scheduler."""
     init_db()
+    db = SessionLocal()
+    try:
+        import_sources_from_csv(db)
+    finally:
+        db.close()
     start_scheduler()
     yield
     stop_scheduler()
@@ -27,6 +34,7 @@ app = FastAPI(
     lifespan=lifespan,
 )
 app.include_router(router)
+app.include_router(sources_router)
 
 
 @app.get('/')

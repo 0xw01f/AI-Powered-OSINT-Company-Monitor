@@ -9,8 +9,7 @@ from typing import TYPE_CHECKING, Any
 
 import feedparser
 
-from backend.config import load_sources
-from backend.database.models import Article, ArticleStatus
+from backend.database.models import Article, ArticleStatus, Source
 
 if TYPE_CHECKING:
     from sqlalchemy.orm import Session
@@ -39,9 +38,17 @@ def fetch_rss_feed(url: str) -> list[dict[str, Any]]:
     return [_parse_entry(entry) for entry in parsed.entries]
 
 
-def collect_rss(db: Session, limit_per_source: int = 20) -> dict[str, int]:
-    """Collect articles from all configured RSS sources."""
-    sources = load_sources()
+def collect_rss(
+    db: Session,
+    limit_per_source: int = 20,
+    min_priority: int | None = None,
+) -> dict[str, int]:
+    """Collect articles from active RSS sources in the database."""
+    query = db.query(Source).filter_by(active=True)
+    if min_priority is not None:
+        query = query.filter(Source.priority >= min_priority)
+    sources = query.all()
+
     total_inserted = 0
     total_skipped = 0
 

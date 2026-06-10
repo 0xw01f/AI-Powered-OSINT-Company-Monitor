@@ -1,88 +1,361 @@
-name,url,category,language
-Intelligence Online,https://feeds.feedburner.com/IntelligenceOnline-fr,news,fr
-Africa Intelligence,https://feeds.feedburner.com/AfricaIntelligence-fr,news,fr
-La Lettre,https://feeds.feedburner.com/LaLettre-fr,news,fr
-Glitz,https://feeds.feedburner.com/glitz-fr,news,fr
-CTI-MS Teams Bot,https://github.com/JMousqueton/CTI-MSTEAMS-Bot/releases.atom,tools,en
-Graham Cluley,https://grahamcluley.com/feed/,security,en
-Threatpost,https://threatpost.com/feed/,security,en
-Krebs on Security,https://krebsonsecurity.com/feed/,security,en
-Dark Reading,https://www.darkreading.com/rss.xml,security,en
-DaVinci Forensics,https://davinciforensics.co.za/cybersecurity/feed/,security,en
-Cisco Security,https://blogs.cisco.com/security/feed,security,en
-Infosecurity Magazine,https://www.infosecurity-magazine.com/rss/news/,security,en
-Google TAG,https://blog.google/threat-analysis-group/rss/,security,en
-Trend Micro,http://feeds.trendmicro.com/TrendMicroResearch,security,en
-Bleeping Computer,https://www.bleepingcomputer.com/feed/,security,en
-Proof Point,https://www.proofpoint.com/us/rss.xml,security,en
-The Hacker News,http://feeds.feedburner.com/TheHackersNews?format=xml,security,en
-Schneier on Security,https://www.schneier.com/feed/atom/,security,en
-Binary Defense,https://www.binarydefense.com/feed/,security,en
-Securelist,https://securelist.com/feed/,security,en
-Checkpoint Research,https://research.checkpoint.com/feed/,security,en
-VirusBulletin,https://www.virusbulletin.com/rss,security,en
-Modexp,https://modexp.wordpress.com/feed/,security,en
-James Forshaw,https://www.tiraniddo.dev/feeds/posts/default,security,en
-Adam Chester,https://blog.xpnsec.com/rss.xml,security,en
-Microsoft Security,https://msrc-blog.microsoft.com/feed/,security,en
-Recorded Future,https://www.recordedfuture.com/feed,security,en
-SentinelOne,https://www.sentinelone.com/feed/,security,en
-RedCanary,https://redcanary.com/feed/,security,en
-Cyber-News,https://cyber-news.fr/feed/atom?,security,fr
-Leak-Lookup,https://leak-lookup.com/rss,security,en
-AT&T Cybersecurity,https://cybersecurity.att.com/site/blog-all-rss,security,en
-US-CERT CISA,https://www.cisa.gov/uscert/ncas/alerts.xml,security,en
-NCSC UK,https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml,security,en
-Center of Internet Security,https://www.cisecurity.org/feed/advisories,security,en
-FR-CERT Alertes,https://cert.ssi.gouv.fr/alerte/feed/,security,fr
-FR-CERT Avis,https://cert.ssi.gouv.fr/avis/feed/,security,fr
-EU-ENISA,https://www.enisa.europa.eu/publications/RSS,security,en
-Microsoft Sentinel,https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8149516204242144484&board=MicrosoftSentinelBlog&size=25,security,en
-NCC Group,https://research.nccgroup.com/category/threat-intelligence/feed/,security,en
-SANS ISC,https://isc.sans.edu/rssfeed.xml,security,en
-Unit42,https://unit42.paloaltonetworks.com/feed/,security,en
-MSRC Security Update,https://api.msrc.microsoft.com/update-guide/rss,security,en
-SecurityWeek,https://www.securityweek.com/feed/,security,en
-PortSwigger,https://portswigger.net/daily-swig/rss,security,en
-CSO Online,https://www.csoonline.com/news/feed/,security,en
-Google Security Blog,https://security.googleblog.com/feeds/posts/default,security,en
-Cloudflare Blog,https://blog.cloudflare.com/rss/,security,en
-GitGuardian,https://blog.gitguardian.com/rss.xml,security,en
-Mandiant,https://www.mandiant.com/resources/blog/rss.xml,security,en
-Mozilla Security,https://blog.mozilla.org/security/feed/,security,en
-F5 Labs,https://www.f5.com/labs/articles/feed,security,en
-CERT-EU Threat Intel,https://cert.europa.eu/publications/threat-intelligence-rss,security,en
-CERT-EU Advisories,https://cert.europa.eu/publications/security-advisories-rss,security,en
-JPCERT,https://www.jpcert.or.jp/english/rss/jpcert-en.rdf,security,en
-Canadian Cyber Security,https://cyber.gc.ca/webservice/en/rss/alerts,security,en
-Bellingcat,https://www.bellingcat.com/feed/,osint,en
-Shadowserver,https://blog.shadowserver.org/feed/,osint,en
-CIRCL,https://www.circl.lu/rss/,osint,en
-TechCrunch,https://techcrunch.com/feed/,tech,en
-The Verge,https://www.theverge.com/rss/index.xml,tech,en
-Wired,https://www.wired.com/feed/rss,tech,en
-Ars Technica,https://feeds.arstechnica.com/arstechnica/index,tech,en
-Engadget,https://www.engadget.com/rss.xml,tech,en
-ZDNet,https://www.zdnet.com/news/rss.xml,tech,en
-Mashable,https://feeds.mashable.com/Mashable,tech,en
-Presse-Citron,https://www.presse-citron.net/feed/,tech,fr
-Korben,https://korben.info/feed,tech,fr
-Journal du Geek,https://www.journaldugeek.com/feed/,tech,fr
-FrenchWeb,https://www.frenchweb.fr/feed,tech,fr
-Usine Digitale,https://www.usine-digitale.fr/rss,tech,fr
-Frandroid,https://www.frandroid.com/feed,tech,fr
-01Net,https://www.01net.com/feed,tech,fr
-Maddyness,https://www.maddyness.com/feed/,tech,fr
-ZDNet FR,https://www.zdnet.fr/feed/,tech,fr
-Le Monde Economie,https://www.lemonde.fr/economie/rss_full.xml,business,fr
-La Tribune,https://www.latribune.fr/rss,business,fr
-BFM Business,https://www.bfmtv.com/rss/entreprises/,business,fr
-Les Echos,https://www.lesechos.fr/rss,business,fr
-Capital,https://www.capital.fr/rss.xml,business,fr
-L'Opinion,https://www.lopinion.fr/rss.xml,business,fr
-Reuters Business,https://www.reutersagency.com/feed/?taxonomy=markets&post_type=reuters-best,business,en
-BBC Business,http://feeds.bbci.co.uk/news/business/rss.xml,business,en
-WSJ Markets,https://feeds.a.dj.com/rss/RSSMarketsMain.xml,business,en
-Foreign Policy,https://www.foreignpolicy.com/feed/,geopolitics,en
-Crisis Group,https://www.crisisgroup.org/rss,geopolitics,en
-RFI,https://www.rfi.fr/en/rss,geopolitics,en
+id,name,url,category,language,domain,subdomain,source_type,country,geographic_scope,reliability,priority,update_frequency,entity_focus,rss_available,active,tags
+1,Intelligence Online,https://feeds.feedburner.com/IntelligenceOnline-fr,news,fr,intelligence,business_intelligence,media,FR,france,95,95,daily,companies,yes,true,intelligence;influence;executives
+2,Africa Intelligence,https://feeds.feedburner.com/AfricaIntelligence-fr,news,fr,intelligence,africa_intelligence,media,FR,africa,95,90,daily,companies,yes,true,africa;politics;business
+3,La Lettre,https://feeds.feedburner.com/LaLettre-fr,news,fr,intelligence,business_intelligence,media,FR,france,90,88,daily,companies,yes,true,intelligence;business;politics
+4,Glitz,https://feeds.feedburner.com/glitz-fr,news,fr,intelligence,business_intelligence,media,FR,france,85,80,daily,companies,yes,true,business;elite;society
+5,CTI-MS Teams Bot,https://github.com/JMousqueton/CTI-MSTEAMS-Bot/releases.atom,tools,en,tools,automation,tool,GLOBAL,global,70,50,weekly,osint_tools,yes,true,automation;tool
+6,Graham Cluley,https://grahamcluley.com/feed/,security,en,cybersecurity,threat_intelligence,expert_blog,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+7,Threatpost,https://threatpost.com/feed/,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+8,Krebs on Security,https://krebsonsecurity.com/feed/,security,en,cybersecurity,threat_intelligence,expert_blog,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+9,Dark Reading,https://www.darkreading.com/rss.xml,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+10,DaVinci Forensics,https://davinciforensics.co.za/cybersecurity/feed/,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware;cyber
+11,Cisco Security,https://blogs.cisco.com/security/feed,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+12,Infosecurity Magazine,https://www.infosecurity-magazine.com/rss/news/,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+13,Google TAG,https://blog.google/threat-analysis-group/rss/,security,en,cybersecurity,threat_intelligence,vendor_research,US,us/global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+14,Trend Micro,http://feeds.trendmicro.com/TrendMicroResearch,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+15,Bleeping Computer,https://www.bleepingcomputer.com/feed/,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+16,Proof Point,https://www.proofpoint.com/us/rss.xml,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+17,The Hacker News,http://feeds.feedburner.com/TheHackersNews?format=xml,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+18,Schneier on Security,https://www.schneier.com/feed/atom/,security,en,cybersecurity,threat_intelligence,expert_blog,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+19,Binary Defense,https://www.binarydefense.com/feed/,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+20,Securelist,https://securelist.com/feed/,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+21,Checkpoint Research,https://research.checkpoint.com/feed/,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+22,VirusBulletin,https://www.virusbulletin.com/rss,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+23,Modexp,https://modexp.wordpress.com/feed/,security,en,cybersecurity,threat_intelligence,expert_blog,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+24,James Forshaw,https://www.tiraniddo.dev/feeds/posts/default,security,en,cybersecurity,threat_intelligence,expert_blog,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+25,Adam Chester,https://blog.xpnsec.com/rss.xml,security,en,cybersecurity,threat_intelligence,expert_blog,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+26,Microsoft Security,https://msrc-blog.microsoft.com/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,US,us/global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+27,Recorded Future,https://www.recordedfuture.com/feed,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+28,SentinelOne,https://www.sentinelone.com/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+29,RedCanary,https://redcanary.com/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+30,Cyber-News,https://cyber-news.fr/feed/atom?,security,fr,cybersecurity,threat_intelligence,media,FR,france,90,90,daily,companies,yes,true,breach;vulnerability;ransomware;cyber
+31,Leak-Lookup,https://leak-lookup.com/rss,security,en,cybersecurity,data_breaches,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware;leaks;credentials
+32,AT&T Cybersecurity,https://cybersecurity.att.com/site/blog-all-rss,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware;cyber
+33,US-CERT CISA,https://www.cisa.gov/uscert/ncas/alerts.xml,security,en,cybersecurity,cert_alerts,government,US,us/global,100,100,realtime,companies,no,true,breach;vulnerability;ransomware;alert;critical
+34,NCSC UK,https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml,security,en,cybersecurity,cert_alerts,government,GLOBAL,global,100,100,realtime,companies,yes,true,breach;vulnerability;ransomware;alert;critical
+35,Center of Internet Security,https://www.cisecurity.org/feed/advisories,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+36,FR-CERT Alertes,https://cert.ssi.gouv.fr/alerte/feed/,security,fr,cybersecurity,cert_alerts,government,FR,france,100,100,realtime,companies,yes,true,breach;vulnerability;ransomware;alert;critical
+37,FR-CERT Avis,https://cert.ssi.gouv.fr/avis/feed/,security,fr,cybersecurity,cert_alerts,government,FR,france,100,100,realtime,companies,yes,true,breach;vulnerability;ransomware;alert;critical
+38,EU-ENISA,https://www.enisa.europa.eu/publications/RSS,security,en,cybersecurity,threat_intelligence,media,EU,europe,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+39,Microsoft Sentinel,https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8149516204242144484&board=MicrosoftSentinelBlog&size=25,security,en,cybersecurity,threat_intelligence,research,US,us/global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+40,NCC Group,https://research.nccgroup.com/category/threat-intelligence/feed/,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+41,SANS ISC,https://isc.sans.edu/rssfeed.xml,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+42,Unit42,https://unit42.paloaltonetworks.com/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+43,MSRC Security Update,https://api.msrc.microsoft.com/update-guide/rss,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+44,TechCrunch,https://techcrunch.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+45,Reuters Business Finance,https://www.reutersagency.com/feed/?best-topics=business-finance&post_type=best,news,en,business_intelligence,general_business,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+46,Reuters Technology,https://www.reutersagency.com/feed/?best-topics=technology&post_type=best,news,en,business_intelligence,general_business,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+47,Reuters Markets,https://www.reutersagency.com/feed/?best-topics=markets&post_type=best,news,en,business_intelligence,general_business,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+48,Reuters Energy,https://www.reutersagency.com/feed/?best-topics=energy&post_type=best,news,en,energy,oil_gas,media,US,us/global,95,75,hourly,companies,yes,true,news;market;energy
+49,Reuters Legal,https://www.reutersagency.com/feed/?best-topics=legal&post_type=best,news,en,legal,regulation,media,US,us/global,95,75,hourly,companies,yes,true,news;market;legal
+50,Reuters Healthcare Pharmaceuticals,https://www.reutersagency.com/feed/?best-topics=healthcare-pharmaceuticals&post_type=best,news,en,healthcare,pharma,media,US,us/global,95,75,hourly,companies,yes,true,news;market;pharma;healthcare
+51,Reuters Autos Transportation,https://www.reutersagency.com/feed/?best-topics=autos-transportation&post_type=best,news,en,transportation,automotive,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+52,Reuters Media Telecoms,https://www.reutersagency.com/feed/?best-topics=media-telecoms&post_type=best,news,en,telecom_media,telecom,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+53,Reuters Consumer Retail,https://www.reutersagency.com/feed/?best-topics=consumer-retail&post_type=best,news,en,retail,consumer_retail,media,US,us/global,95,75,hourly,companies,yes,true,news;market;retail
+54,Reuters Climate,https://www.reutersagency.com/feed/?best-topics=climate&post_type=best,news,en,sustainability,climate,media,US,us/global,95,75,hourly,companies,yes,true,news;market;climate
+55,Reuters Cybersecurity,https://www.reutersagency.com/feed/?best-topics=cybersecurity&post_type=best,news,en,cybersecurity,threat_intelligence,media,US,us/global,95,75,hourly,companies,yes,true,news;market;cyber
+56,Reuters Artificial Intelligence,https://www.reutersagency.com/feed/?best-topics=artificial-intelligence&post_type=best,news,en,technology,ai,media,US,us/global,95,75,hourly,companies,yes,true,news;market;ai
+57,Reuters Semiconductors,https://www.reutersagency.com/feed/?best-topics=semiconductors&post_type=best,news,en,technology,semiconductors,media,US,us/global,95,75,hourly,companies,yes,true,news;market;semiconductor
+58,Reuters Cloud Computing,https://www.reutersagency.com/feed/?best-topics=cloud-computing&post_type=best,news,en,technology,cloud,media,US,us/global,95,75,hourly,companies,yes,true,news;market;cloud
+59,Reuters Data Centers,https://www.reutersagency.com/feed/?best-topics=data-centers&post_type=best,news,en,technology,datacenter,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+60,Reuters Manufacturing,https://www.reutersagency.com/feed/?best-topics=manufacturing&post_type=best,news,en,industry,manufacturing,media,US,us/global,95,75,hourly,companies,yes,true,news;market;manufacturing
+61,Reuters Agriculture,https://www.reutersagency.com/feed/?best-topics=agriculture&post_type=best,news,en,agriculture,agribusiness,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+62,Reuters Mining Metals,https://www.reutersagency.com/feed/?best-topics=mining-metals&post_type=best,news,en,mining,metals,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+63,Reuters Real Estate,https://www.reutersagency.com/feed/?best-topics=real-estate&post_type=best,news,en,real_estate,property,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+64,Reuters Insurance,https://www.reutersagency.com/feed/?best-topics=insurance&post_type=best,news,en,finance,insurance,media,US,us/global,95,75,hourly,companies,yes,true,news;market;insurance
+65,Reuters Payments,https://www.reutersagency.com/feed/?best-topics=payments&post_type=best,news,en,finance,payments,media,US,us/global,95,75,hourly,companies,yes,true,news;market;payments
+66,Reuters Fintech,https://www.reutersagency.com/feed/?best-topics=fintech&post_type=best,news,en,finance,fintech,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+67,Reuters Travel Hospitality,https://www.reutersagency.com/feed/?best-topics=travel-hospitality&post_type=best,news,en,travel,hospitality,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+68,Reuters Aerospace Defense,https://www.reutersagency.com/feed/?best-topics=aerospace-defense&post_type=best,news,en,defense,aerospace,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+69,Reuters Private Equity,https://www.reutersagency.com/feed/?best-topics=private-equity&post_type=best,news,en,finance,private_equity,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+70,Reuters Venture Capital,https://www.reutersagency.com/feed/?best-topics=venture-capital&post_type=best,news,en,finance,venture_capital,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+71,Reuters Mergers Acquisitions,https://www.reutersagency.com/feed/?best-topics=mergers-acquisitions&post_type=best,news,en,finance,mna,media,US,us/global,95,75,hourly,companies,yes,true,news;market;mna
+72,Reuters Supply Chain,https://www.reutersagency.com/feed/?best-topics=supply-chain&post_type=best,news,en,supply_chain,logistics,media,US,us/global,95,75,hourly,companies,yes,true,news;market;supply_chain
+73,Reuters Trade,https://www.reutersagency.com/feed/?best-topics=trade&post_type=best,news,en,trade,global_trade,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+74,Reuters Regulation,https://www.reutersagency.com/feed/?best-topics=regulation&post_type=best,news,en,regulation,public_policy,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+75,Reuters Cryptocurrency,https://www.reutersagency.com/feed/?best-topics=cryptocurrency&post_type=best,news,en,finance,crypto,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+76,Reuters Public Policy,https://www.reutersagency.com/feed/?best-topics=public-policy&post_type=best,news,en,regulation,public_policy,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+77,Reuters Banking,https://www.reutersagency.com/feed/?best-topics=banking&post_type=best,news,en,finance,banking,media,US,us/global,95,75,hourly,companies,yes,true,news;market;banking
+78,Reuters Oil And Gas,https://www.reutersagency.com/feed/?best-topics=oil-and-gas&post_type=best,news,en,energy,oil_gas,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+79,Reuters Electric Vehicles,https://www.reutersagency.com/feed/?best-topics=electric-vehicles&post_type=best,news,en,automotive,ev,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+80,Reuters Retail,https://www.reutersagency.com/feed/?best-topics=retail&post_type=best,news,en,retail,consumer_retail,media,US,us/global,95,75,hourly,companies,yes,true,news;market;retail
+81,Reuters Telecoms,https://www.reutersagency.com/feed/?best-topics=telecoms&post_type=best,news,en,telecom_media,telecom,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+82,Reuters Health,https://www.reutersagency.com/feed/?best-topics=health&post_type=best,news,en,healthcare,pharma,media,US,us/global,95,75,hourly,companies,yes,true,news;market;healthcare
+83,Reuters Pharmaceuticals,https://www.reutersagency.com/feed/?best-topics=pharmaceuticals&post_type=best,news,en,healthcare,pharma,media,US,us/global,95,75,hourly,companies,yes,true,news;market;pharma
+84,The Guardian Business,https://www.theguardian.com/business/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+85,The Guardian Technology,https://www.theguardian.com/technology/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+86,The Guardian World,https://www.theguardian.com/world/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+87,The Guardian Environment,https://www.theguardian.com/environment/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+88,The Guardian Science,https://www.theguardian.com/science/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+89,The Guardian Media,https://www.theguardian.com/media/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+90,The Guardian Money,https://www.theguardian.com/money/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+91,The Guardian Politics,https://www.theguardian.com/politics/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+92,The Guardian Us,https://www.theguardian.com/us/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+93,The Guardian Global-Development,https://www.theguardian.com/global-development/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+94,The Guardian Commentisfree,https://www.theguardian.com/commentisfree/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+95,The Guardian Artanddesign,https://www.theguardian.com/artanddesign/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+96,The Guardian Lifeandstyle,https://www.theguardian.com/lifeandstyle/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+97,The Guardian Travel,https://www.theguardian.com/travel/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+98,The Guardian Food,https://www.theguardian.com/food/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+99,The Guardian Fashion,https://www.theguardian.com/fashion/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+100,The Guardian Education,https://www.theguardian.com/education/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+101,The Guardian Law,https://www.theguardian.com/law/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+102,The Guardian Cities,https://www.theguardian.com/cities/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+103,The Guardian Books,https://www.theguardian.com/books/rss,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+104,BBC Business,https://feeds.bbci.co.uk/news/business/rss.xml,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+105,BBC Technology,https://feeds.bbci.co.uk/news/technology/rss.xml,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+106,BBC World,https://feeds.bbci.co.uk/news/world/rss.xml,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+107,BBC Health,https://feeds.bbci.co.uk/news/health/rss.xml,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market;healthcare
+108,BBC Science & Environment,https://feeds.bbci.co.uk/news/science_and_environment/rss.xml,news,en,business_intelligence,general_business,media,UK,uk,78,75,daily,companies,yes,true,news;market
+109,NPR Business,https://feeds.npr.org/1006/rss.xml,news,en,business_intelligence,general_business,media,US,us,78,75,daily,companies,yes,true,news;market
+110,NPR Technology,https://feeds.npr.org/1019/rss.xml,news,en,business_intelligence,general_business,media,US,us,78,75,daily,companies,yes,true,news;market
+111,NPR World,https://feeds.npr.org/1001/rss.xml,news,en,business_intelligence,general_business,media,US,us,78,75,daily,companies,yes,true,news;market
+112,NPR Health,https://feeds.npr.org/1007/rss.xml,news,en,business_intelligence,general_business,media,US,us,78,75,daily,companies,yes,true,news;market;healthcare
+113,NPR Science,https://feeds.npr.org/1013/rss.xml,news,en,business_intelligence,general_business,media,US,us,78,75,daily,companies,yes,true,news;market
+114,NPR Politics,https://feeds.npr.org/1014/rss.xml,news,en,business_intelligence,general_business,media,US,us,78,75,daily,companies,yes,true,news;market
+115,NPR National,https://feeds.npr.org/1003/rss.xml,news,en,business_intelligence,general_business,media,US,us,78,75,daily,companies,yes,true,news;market
+116,The Verge,https://www.theverge.com/rss/index.xml,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+117,Wired,https://www.wired.com/feed/rss,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+118,Ars Technica,https://feeds.arstechnica.com/arstechnica/index,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+119,Engadget,https://www.engadget.com/rss.xml,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+120,ZDNet,https://www.zdnet.com/news/rss.xml,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+121,The Register,https://www.theregister.com/headlines.atom,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+122,VentureBeat,https://venturebeat.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+123,GeekWire,https://www.geekwire.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+124,MIT Technology Review,https://www.technologyreview.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+125,Mashable Tech,https://mashable.com/tech/rss,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+126,Gizmodo,https://gizmodo.com/rss,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+127,The Next Web,https://thenextweb.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+128,Protocol,https://www.protocol.com/feed,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+129,SiliconANGLE,https://siliconangle.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+130,Computerworld,https://www.computerworld.com/index.rss,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+131,InfoWorld,https://www.infoworld.com/index.rss,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+132,CNET,https://www.cnet.com/rss/news/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+133,The Information,https://www.theinformation.com/feed,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+134,Tom's Hardware,https://www.tomshardware.com/feeds/all,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+135,Tom's Guide,https://www.tomsguide.com/feeds/all,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+136,PCMag,https://www.pcmag.com/rss/all,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+137,TechRadar,https://www.techradar.com/rss,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+138,9to5Mac,https://9to5mac.com/feed/,tech,en,technology,consumer_tech,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+139,9to5Google,https://9to5google.com/feed/,tech,en,technology,consumer_tech,media,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+140,MacRumors,https://www.macrumors.com/macrumors.xml,tech,en,technology,consumer_tech,media,GLOBAL,global,80,70,daily,technology_companies,no,true,technology;innovation
+141,Android Authority,https://www.androidauthority.com/feed/,tech,en,technology,consumer_tech,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+142,Android Police,https://www.androidpolice.com/feed/,tech,en,technology,consumer_tech,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+143,Liliputing,https://liliputing.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+144,Daring Fireball,https://daringfireball.net/feeds/main,tech,en,technology,software,media,EU,europe,80,70,daily,technology_companies,yes,true,technology;innovation
+145,Simon Willison's Weblog,https://simonwillison.net/atom/everything/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,no,true,technology;innovation
+146,CSS-Tricks,https://css-tricks.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+147,Google Blog,https://blog.google/feed/,tech,en,technology,consumer_tech,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+148,Google Security Blog,https://security.googleblog.com/feeds/posts/default,tech,en,technology,consumer_tech,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+149,Google Developer Blog,https://developers.googleblog.com/feeds/posts/default,tech,en,technology,consumer_tech,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+150,Microsoft Blog,https://blogs.microsoft.com/feed/,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+151,Microsoft Azure Blog,https://azure.microsoft.com/en-us/blog/feed/,tech,en,technology,cloud_infrastructure,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+152,Microsoft Tech Community,https://techcommunity.microsoft.com/gxcuf89792/rss/Community?interaction.style=blog,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+153,Apple Newsroom,https://www.apple.com/newsroom/rss-feed.rss,tech,en,technology,consumer_tech,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+154,Apple Developer News,https://developer.apple.com/news/rss/news.rss,tech,en,technology,consumer_tech,media,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+155,IBM Newsroom,https://newsroom.ibm.com/rss,tech,en,technology,software,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+156,IBM Research,https://research.ibm.com/blog/rss.xml,tech,en,technology,software,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+157,Amazon About Amazon,https://www.aboutamazon.com/news/feed,tech,en,technology,software,media,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+158,Meta Newsroom,https://about.fb.com/news/feed/,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+159,NVIDIA Blog,https://blogs.nvidia.com/feed/,tech,en,technology,semiconductors,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+160,Intel Newsroom,https://www.intel.com/content/www/us/en/newsroom/feed.html,tech,en,technology,semiconductors,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+161,AMD Blog,https://www.amd.com/en/blog/rss.xml,tech,en,technology,semiconductors,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+162,Oracle Blogs,https://blogs.oracle.com/rss,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+163,SAP News,https://news.sap.com/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+164,Salesforce Blog,https://www.salesforce.com/blog/feed/,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+165,ServiceNow Blog,https://www.servicenow.com/blogs/feed,tech,en,technology,software,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+166,Cisco Blogs,https://blogs.cisco.com/feed,tech,en,technology,software,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+167,Adobe Blog,https://blog.adobe.com/en/rss,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+168,GitHub Blog,https://github.blog/feed/,tech,en,technology,developer_tools,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+169,Cloudflare Blog,https://blog.cloudflare.com/rss/,tech,en,technology,cloud_infrastructure,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+170,Fastly Blog,https://www.fastly.com/blog/feed.xml,tech,en,technology,cloud_infrastructure,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+171,Akamai Blog,https://www.akamai.com/blog/feed,tech,en,technology,ai,corporate,GLOBAL,global,80,90,daily,technology_companies,yes,true,technology;innovation
+172,Stripe Blog,https://stripe.com/blog/feed.rss,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+173,Shopify News,https://www.shopify.com/news.rss,tech,en,technology,software,media,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+174,Shopify Engineering,https://shopify.engineering/blogs/engineering/rss,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+175,Atlassian Blog,https://www.atlassian.com/blog/feed,tech,en,technology,developer_tools,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+176,Red Hat Blog,https://www.redhat.com/en/blog/rss.xml,tech,en,technology,software,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+177,SUSE Blog,https://www.suse.com/c/feed/,tech,en,technology,software,media,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+178,Mozilla Blog,https://blog.mozilla.org/feed/,tech,en,technology,software,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+179,Twilio Blog,https://www.twilio.com/en-us/blog/rss.xml,tech,en,technology,software,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+180,Zoom Blog,https://blog.zoom.us/feed/,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+181,Datadog Blog,https://www.datadoghq.com/blog/rss/,tech,en,technology,cloud_infrastructure,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+182,Snowflake Blog,https://www.snowflake.com/blog/feed/,tech,en,technology,cloud_infrastructure,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+183,Confluent Blog,https://www.confluent.io/blog/feed/,tech,en,technology,cloud_infrastructure,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+184,Elastic Blog,https://www.elastic.co/blog/feed,tech,en,technology,cloud_infrastructure,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+185,Okta Blog,https://www.okta.com/blog/feed/,tech,en,technology,software,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+186,HashiCorp Blog,https://www.hashicorp.com/blog/feed,tech,en,technology,developer_tools,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+187,Docker Blog,https://www.docker.com/blog/feed/,tech,en,technology,developer_tools,corporate,GLOBAL,global,80,70,daily,technology_companies,yes,true,technology;innovation
+188,Slack Blog,https://slack.com/blog/feed,tech,en,technology,developer_tools,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+189,Dropbox Blog,https://blog.dropbox.com/feed,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+190,ZoomInfo Blog,https://www.zoominfo.com/blog/feed/,tech,en,technology,software,corporate,US,us/global,80,70,daily,technology_companies,yes,true,technology;innovation
+191,Sophos News,https://news.sophos.com/en-us/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+192,Malwarebytes Labs,https://www.malwarebytes.com/blog/feed,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+193,CrowdStrike Blog,https://www.crowdstrike.com/blog/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+194,Mandiant Blog,https://www.mandiant.com/resources/blog/rss.xml,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+195,ESET WeLiveSecurity,https://www.welivesecurity.com/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+196,Fortinet Blog,https://www.fortinet.com/blog/threat-research/rss.xml,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+197,Palo Alto Networks Blog,https://www.paloaltonetworks.com/blog/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+198,Rapid7 Blog,https://www.rapid7.com/blog/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+199,Qualys Blog,https://blog.qualys.com/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+200,Tenable Blog,https://www.tenable.com/blog/feed,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+201,BlackBerry Blog,https://blogs.blackberry.com/en,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,no,true,breach;vulnerability;ransomware
+202,Bitdefender Labs,https://www.bitdefender.com/blog/api/rss/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+203,F-Secure Blog,https://blog.f-secure.com/feed/,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+204,WithSecure Labs,https://labs.withsecure.com/feed,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+205,Radware Blog,https://www.radware.com/blog/feed/,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+206,AhnLab,https://asec.ahnlab.com/en/feed/,security,en,cybersecurity,threat_intelligence,media,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+207,SonicWall Blog,https://www.sonicwall.com/blog-feed/,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+208,WatchGuard Blog,https://www.watchguard.com/wgrd-news/blog/rss.xml,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+209,Armis Blog,https://www.armis.com/blog/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+210,Orca Security Blog,https://orca.security/resources/blog/feed/,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+211,Wiz Blog,https://www.wiz.io/blog/rss.xml,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+212,Netskope Blog,https://www.netskope.com/blog/rss.xml,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+213,Zscaler Blog,https://www.zscaler.com/blogs/security-research/rss.xml,security,en,cybersecurity,threat_intelligence,vendor_research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+214,Cisco Talos,https://blog.talosintelligence.com/feeds/posts/default,security,en,cybersecurity,threat_intelligence,research,GLOBAL,global,90,90,daily,companies,yes,true,breach;vulnerability;ransomware
+215,SEC Press Releases,https://www.sec.gov/news/pressreleases.rss,regulation,en,regulation,securities,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,filings;enforcement;policy;compliance
+216,SEC Litigation Releases,https://www.sec.gov/litigation/litreleases.rss,regulation,en,regulation,securities,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,filings;enforcement;policy;compliance
+217,CISA Bulletins,https://www.cisa.gov/uscert/ncas/bulletins.xml,regulation,en,regulation,cybersecurity,regulator,US,us/global,98,95,realtime,regulated_entities,no,true,policy;compliance
+218,FTC Press Releases,https://www.ftc.gov/feeds/press-releases.xml,regulation,en,regulation,consumer_policy,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+219,DOJ Press Releases,https://www.justice.gov/feeds/pressreleases.xml,regulation,en,regulation,consumer_policy,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+220,FCC News Releases,https://www.fcc.gov/news-events/rss-feed,regulation,en,regulation,consumer_policy,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+221,FDA News Releases,https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-announcements/rss.xml,regulation,en,healthcare,public_health,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+222,EMA News,https://www.ema.europa.eu/en/news-events/rss,regulation,en,healthcare,public_health,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+223,MHRA News,https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency.atom,regulation,en,healthcare,public_health,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance;healthcare
+224,ECB Press Releases,https://www.ecb.europa.eu/rss/press.html,regulation,en,finance,financial_regulation,regulator,EU,europe,98,95,realtime,regulated_entities,yes,true,policy;compliance
+225,Federal Reserve Press,https://www.federalreserve.gov/feeds/press_all.xml,regulation,en,finance,financial_regulation,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+226,CFPB Newsroom,https://www.consumerfinance.gov/about-us/newsroom/rss/,regulation,en,finance,financial_regulation,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+227,FDIC News,https://www.fdic.gov/news/press-releases/index.xml,regulation,en,finance,financial_regulation,regulator,US,us/global,98,95,realtime,regulated_entities,no,true,policy;compliance
+228,FCA News,https://www.fca.org.uk/news/rss.xml,regulation,en,finance,financial_regulation,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+229,ESMA News,https://www.esma.europa.eu/rss,regulation,en,finance,financial_regulation,regulator,EU,europe,98,95,realtime,regulated_entities,yes,true,policy;compliance
+230,EBA News,https://www.eba.europa.eu/rss.xml,regulation,en,finance,financial_regulation,regulator,EU,europe,98,95,realtime,regulated_entities,yes,true,policy;compliance
+231,ACPR News,https://acpr.banque-france.fr/rss.xml,regulation,en,finance,financial_regulation,regulator,FR,france,98,95,realtime,regulated_entities,yes,true,policy;compliance
+232,AMF News,https://www.amf-france.org/fr/rss.xml,regulation,en,finance,financial_regulation,regulator,FR,france,98,95,realtime,regulated_entities,yes,true,policy;compliance
+233,CNIL News,https://www.cnil.fr/fr/rss.xml,regulation,en,privacy,data_protection,regulator,FR,france,98,95,realtime,regulated_entities,yes,true,policy;compliance
+234,ANSSI News,https://www.ssi.gouv.fr/feed/,regulation,en,regulation,cybersecurity,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+235,IRS News,https://www.irs.gov/newsroom/rss.xml,regulation,en,tax,tax_policy,regulator,US,us/global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+236,HMRC News,https://www.gov.uk/government/organisations/hm-revenue-customs.atom,regulation,en,tax,tax_policy,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+237,OECD News,https://www.oecd.org/newsroom/rss.xml,regulation,en,regulation,general,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+238,WIPO News,https://www.wipo.int/pressroom/en/rss.xml,regulation,en,intellectual_property,patents,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+239,USPTO News,https://www.uspto.gov/rss/news.xml,regulation,en,intellectual_property,patents,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+240,EPO News,https://www.epo.org/news-events/news.rss,regulation,en,intellectual_property,patents,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+241,NIST News,https://www.nist.gov/news-events/news/rss.xml,regulation,en,privacy,data_protection,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+242,EDPB News,https://www.edpb.europa.eu/edpb_news.xml,regulation,en,privacy,data_protection,regulator,EU,europe,98,95,realtime,regulated_entities,no,true,policy;compliance
+243,ICO News,https://ico.org.uk/about-the-ico/media-centre/rss/,regulation,en,privacy,data_protection,regulator,GLOBAL,global,98,95,realtime,regulated_entities,yes,true,policy;compliance
+244,Shell News,https://www.shell.com/media/news-and-media-releases/_jcr_content/root/container/section-0/tabcontent_2/tabpanel_0/rtefeed.feed.xml,industrial,en,energy,oil_gas,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+245,BP News,https://www.bp.com/en/global/corporate/news-and-insights/press-releases.feed.xml,industrial,en,energy,oil_gas,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+246,ExxonMobil News,https://corporate.exxonmobil.com/news/rss,industrial,en,energy,oil_gas,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+247,Chevron News,https://www.chevron.com/news/rss,industrial,en,energy,oil_gas,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+248,TotalEnergies News,https://totalenergies.com/media/news/press-releases/rss,industrial,en,energy,oil_gas,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+249,Equinor News,https://www.equinor.com/news/rss,industrial,en,energy,oil_gas,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+250,Siemens News,https://press.siemens.com/global/en/rss,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+251,Schneider Electric News,https://www.se.com/ww/en/about-us/newsroom/news/rss.xml,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+252,ABB News,https://global.abb/group/en/rss,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+253,Honeywell News,https://www.honeywell.com/us/en/news/rss,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+254,GE Aerospace News,https://www.geaerospace.com/news/rss,industrial,en,aerospace,aviation,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+255,Airbus Newsroom,https://www.airbus.com/en/newsroom/press-releases/rss,industrial,en,aerospace,aviation,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+256,Boeing News,https://www.boeing.com/news/frontiers/feed.rss,industrial,en,aerospace,aviation,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+257,Caterpillar News,https://www.caterpillar.com/en/news.html/rss,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+258,Rolls-Royce News,https://www.rolls-royce.com/media/press-releases/rss.aspx,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+259,Alstom News,https://www.alstom.com/press-releases/rss,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+260,Saint-Gobain News,https://www.saint-gobain.com/en/press-release/rss,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+261,ArcelorMittal News,https://corporate.arcelormittal.com/media/news/rss,industrial,en,industry,manufacturing,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+262,Volkswagen News,https://www.volkswagen-group.com/en/news/rss,industrial,en,automotive,automotive,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+263,BMW News,https://www.press.bmwgroup.com/global/rss,industrial,en,automotive,automotive,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+264,Mercedes-Benz News,https://group.mercedes-benz.com/company/news/rss.xml,industrial,en,automotive,automotive,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+265,Toyota News,https://global.toyota/en/newsroom/rss.xml,industrial,en,automotive,automotive,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+266,Ford Media Center,https://media.ford.com/content/fordmedia/fna/us/en/news.rss,industrial,en,automotive,automotive,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+267,GM News,https://media.gm.com/media/us/en/gm/news.feed,industrial,en,automotive,automotive,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+268,Tesla Updates,https://www.tesla.com/blog/rss,industrial,en,automotive,automotive,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+269,Nokia News,https://www.nokia.com/rss/news.xml,industrial,en,telecom,network_infrastructure,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+270,Ericsson News,https://www.ericsson.com/en/rss/news,industrial,en,telecom,network_infrastructure,corporate,GLOBAL,global,88,80,daily,industrial_companies,yes,true,industry;operations
+271,Pfizer News,https://www.pfizer.com/news/rss,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+272,Moderna News,https://investors.modernatx.com/rss/news-releases.xml,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+273,GSK News,https://www.gsk.com/en-gb/media/rss/,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+274,AstraZeneca News,https://www.astrazeneca.com/media-centre/press-releases/rss.html,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+275,Roche News,https://www.roche.com/media/releases/rss.xml,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+276,Novartis News,https://www.novartis.com/news/rss.xml,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+277,Sanofi News,https://www.sanofi.com/en/media-room/press-releases/rss,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+278,Eli Lilly News,https://investor.lilly.com/rss/news-releases.xml,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+279,Johnson & Johnson News,https://www.jnj.com/media-center/rss,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+280,Merck News,https://www.merck.com/news/rss/,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+281,Amgen News,https://www.amgen.com/newsroom/rss,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+282,Bristol Myers Squibb News,https://news.bms.com/rss,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+283,AbbVie News,https://news.abbvie.com/rss,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+284,Bayer News,https://www.bayer.com/en/news-stories/rss,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+285,Takeda News,https://www.takeda.com/newsroom/rss.xml,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+286,UCB News,https://www.ucb.com/newsroom/rss,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+287,WHO News,https://www.who.int/rss-feeds/news-english.xml,pharma,en,healthcare,pharmaceuticals,corporate,GLOBAL,global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+288,CDC News,https://www.cdc.gov/media/rss/index.html,pharma,en,healthcare,pharmaceuticals,corporate,US,us/global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+289,NIH News,https://www.nih.gov/news-events/news-releases/rss.xml,pharma,en,healthcare,pharmaceuticals,corporate,US,us/global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+290,FDA Drug Safety,https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/drugs/rss.xml,pharma,en,healthcare,pharmaceuticals,corporate,US,us/global,90,85,daily,pharma_companies,yes,true,drug;clinical;pharma
+291,Walmart News,https://corporate.walmart.com/newsroom/feed,retail,en,retail,consumer_retail,corporate,US,us/global,88,80,daily,retailers,yes,true,retail;consumer
+292,Target News,https://corporate.target.com/newsroom/rss,retail,en,retail,consumer_retail,corporate,US,us/global,88,80,daily,retailers,yes,true,retail;consumer
+293,Costco News,https://www.costco.com/press-releases.html?rss=1,retail,en,retail,consumer_retail,corporate,US,us/global,88,80,daily,retailers,yes,true,retail;consumer
+294,Carrefour News,https://www.carrefour.com/en/rss.xml,retail,en,retail,consumer_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+295,Tesco News,https://www.tescoplc.com/news/rss/,retail,en,retail,consumer_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+296,LVMH News,https://www.lvmh.com/rss/,retail,en,retail,brand_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+297,Nike News,https://news.nike.com/rss,retail,en,retail,brand_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+298,Adidas News,https://www.adidas-group.com/en/media/news-archive/rss/,retail,en,retail,brand_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+299,Inditex News,https://www.inditex.com/rss,retail,en,retail,consumer_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+300,H&M News,https://www2.hm.com/en_gb/news/press-releases/rss.html,retail,en,retail,consumer_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+301,Home Depot News,https://ir.homedepot.com/rss/news-releases.xml,retail,en,retail,consumer_retail,corporate,US,us/global,88,80,daily,retailers,yes,true,retail;consumer
+302,Lowe's News,https://investor.lowes.com/rss/news-releases.xml,retail,en,retail,consumer_retail,corporate,US,us/global,88,80,daily,retailers,yes,true,retail;consumer
+303,Best Buy News,https://investors.bestbuy.com/rss/news-releases.xml,retail,en,retail,consumer_retail,corporate,US,us/global,88,80,daily,retailers,yes,true,retail;consumer
+304,Sephora News,https://www.sephora.com/rss.xml,retail,en,retail,brand_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+305,Ulta News,https://investor.ulta.com/rss/news-releases.xml,retail,en,retail,brand_retail,corporate,GLOBAL,global,88,80,daily,retailers,yes,true,retail;consumer
+306,FedEx News,https://newsroom.fedex.com/feed/,logistics,en,supply_chain,logistics,corporate,US,us/global,88,82,daily,logistics,yes,true,logistics;shipping
+307,UPS News,https://about.ups.com/us/en/newsroom/news.rss,logistics,en,supply_chain,logistics,corporate,US,us/global,88,82,daily,logistics,yes,true,logistics;shipping
+308,DHL News,https://www.dhl.com/global-en/home/press/rss-feed.xml,logistics,en,supply_chain,logistics,corporate,US,us/global,88,82,daily,logistics,yes,true,logistics;shipping
+309,Maersk News,https://www.maersk.com/news/articles/rss,logistics,en,supply_chain,logistics,corporate,DK,global,88,82,daily,logistics,yes,true,logistics;shipping
+310,MSC News,https://www.msc.com/en/rss,logistics,en,supply_chain,logistics,corporate,GLOBAL,global,88,82,daily,logistics,yes,true,logistics;shipping
+311,CMA CGM News,https://www.cmacgm-group.com/en/news/rss,logistics,en,supply_chain,logistics,corporate,GLOBAL,global,88,82,daily,logistics,yes,true,logistics;shipping
+312,DB Schenker News,https://www.dbschenker.com/global-en/news/rss,logistics,en,supply_chain,logistics,corporate,GLOBAL,global,88,82,daily,logistics,yes,true,logistics;shipping
+313,Kuehne+Nagel News,https://newsroom.kuehne-nagel.com/rss,logistics,en,supply_chain,logistics,corporate,GLOBAL,global,88,82,daily,logistics,yes,true,logistics;shipping
+314,XPO News,https://investors.xpo.com/rss/news-releases.xml,logistics,en,supply_chain,logistics,corporate,GLOBAL,global,88,82,daily,logistics,yes,true,logistics;shipping
+315,Delta News,https://news.delta.com/rss,logistics,en,aviation,air_transport,corporate,GLOBAL,global,88,82,daily,logistics,yes,true,logistics;shipping
+316,United Airlines News,https://news.united.com/rss,logistics,en,aviation,air_transport,corporate,GLOBAL,global,88,82,daily,logistics,yes,true,logistics;shipping
+317,Air France KLM News,https://www.airfranceklm.com/en/press-releases/rss.xml,logistics,en,aviation,air_transport,corporate,GLOBAL,global,88,82,daily,logistics,yes,true,logistics;shipping
+318,Verizon News,https://www.verizon.com/about/news/rss.xml,media,en,telecom_media,telecom,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+319,AT&T News,https://about.att.com/rss,media,en,telecom_media,media,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+320,T-Mobile News,https://www.t-mobile.com/news/rss,media,en,telecom_media,telecom,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+321,Vodafone News,https://www.vodafone.com/newscentre/rss.xml,media,en,telecom_media,telecom,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+322,Orange News,https://www.orange.com/en/rss.xml,media,en,telecom_media,telecom,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+323,Deutsche Telekom News,https://www.telekom.com/en/media/rss,media,en,telecom_media,telecom,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+324,Telefonica News,https://www.telefonica.com/en/communication-room/news/rss/,media,en,telecom_media,telecom,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+325,BT Group News,https://www.bt.com/about/bt/news/rss,media,en,telecom_media,telecom,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+326,Comcast News,https://corporate.comcast.com/rss,media,en,telecom_media,media,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+327,Disney News,https://thewaltdisneycompany.com/feed/,media,en,telecom_media,media,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+328,Netflix News,https://about.netflix.com/en/newsroom/rss,media,en,telecom_media,media,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+329,Paramount News,https://www.paramount.com/feed,media,en,telecom_media,media,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+330,Warner Bros. Discovery News,https://wbd.com/news/rss/,media,en,telecom_media,media,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+331,NBCUniversal News,https://www.nbcuniversal.com/news/rss,media,en,telecom_media,media,corporate,GLOBAL,global,85,75,daily,telecoms_and_media,yes,true,telecom;media
+332,IEA News,https://www.iea.org/rss/news.xml,sustainability,en,sustainability,climate,government,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+333,UNEP News,https://www.unep.org/rss.xml,sustainability,en,sustainability,climate,government,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+334,IPCC News,https://www.ipcc.ch/rss,sustainability,en,sustainability,climate,government,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+335,World Bank News,https://www.worldbank.org/en/news/all?format=rss,sustainability,en,sustainability,macro_policy,government,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate;banking
+336,IMF News,https://www.imf.org/en/News/RSS,sustainability,en,sustainability,macro_policy,government,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+337,WEF News,https://www.weforum.org/agenda/feed/,sustainability,en,sustainability,macro_policy,government,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+338,CDP News,https://www.cdp.net/en/news/rss,sustainability,en,sustainability,esg_reporting,ngo,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+339,SBTi News,https://sciencebasedtargets.org/news/rss,sustainability,en,sustainability,esg_reporting,ngo,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+340,GRI News,https://www.globalreporting.org/news/rss,sustainability,en,sustainability,esg_reporting,ngo,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+341,ISSB News,https://www.ifrs.org/news-and-events/rss/,sustainability,en,sustainability,esg_reporting,ngo,GLOBAL,global,92,75,daily,esg,yes,true,esg;climate
+342,EIB News,https://www.eib.org/en/press/rss.xml,sustainability,en,sustainability,macro_policy,government,EU,europe,92,75,daily,esg,yes,true,esg;climate
+343,Les Echos,https://www.lesechos.fr/rss/rss_une.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+344,Le Monde Économie,https://www.lemonde.fr/economie/rss_full.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+345,L'Usine Nouvelle,https://www.usinenouvelle.com/rss.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+346,Challenges,https://www.challenges.fr/rss.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+347,Maddyness,https://www.maddyness.com/feed/,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+348,BFM Business,https://www.bfmtv.com/economie/rss.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+349,Franceinfo Éco,https://www.francetvinfo.fr/economie.rss,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+350,Numerama,https://www.numerama.com/feed/,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+351,Journal du Net,https://www.journaldunet.com/feed/,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+352,01net,https://www.01net.com/feed/,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+353,Clubic,https://www.clubic.com/feed/,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+354,Frandroid,https://www.frandroid.com/feed,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+355,Ministère Économie,https://www.economie.gouv.fr/rss.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+356,Service-Public.fr,https://www.service-public.fr/rss.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+357,Insee,https://www.insee.fr/fr/rss.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+358,Banque de France,https://www.banque-france.fr/rss.xml,news,fr,business_intelligence,general_business,media,FR,france,78,75,daily,companies,yes,true,news;market
+359,Reuters World,https://www.reutersagency.com/feed/?best-topics=world-news&post_type=best,news,en,business_intelligence,general_business,media,US,us/global,95,75,hourly,companies,yes,true,news;market
+360,Reuters Energy Transition,https://www.reutersagency.com/feed/?best-topics=energy-transition&post_type=best,news,en,energy,oil_gas,media,US,us/global,95,75,hourly,companies,yes,true,news;market;energy

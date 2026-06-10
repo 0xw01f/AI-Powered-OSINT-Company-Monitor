@@ -10,13 +10,16 @@ from sqlalchemy.orm import Session
 
 from backend.api import router
 from backend.database import get_db, init_db
+from backend.scheduler import start_scheduler, stop_scheduler
 
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncGenerator[None]:
-    """Initialize database tables on application startup."""
+    """Initialize database tables and background scheduler on startup."""
     init_db()
+    start_scheduler()
     yield
+    stop_scheduler()
 
 
 app = FastAPI(

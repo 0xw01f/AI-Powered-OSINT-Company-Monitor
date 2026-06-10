@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session  # noqa: TC002
 from backend.collectors import collect_rss
 from backend.database.session import get_db
 from backend.nlp.benchmark import benchmark_text
+from backend.scheduler import get_scheduler_status
 from backend.services.monitor import (
     add_monitored_company,
     get_alerts,
@@ -144,3 +145,9 @@ def monitor_alerts(
         }
         for article in articles
     ]
+
+
+@router.get('/scheduler/status')
+def scheduler_status() -> dict[str, Any]:
+    """Return background scheduler status."""
+    return get_scheduler_status()

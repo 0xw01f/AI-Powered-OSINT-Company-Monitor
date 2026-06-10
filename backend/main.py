@@ -2,10 +2,13 @@
 
 from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
+from typing import Annotated
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
+from sqlalchemy import text
+from sqlalchemy.orm import Session
 
-from backend.database import init_db
+from backend.database import get_db, init_db
 
 
 @asynccontextmanager
@@ -25,3 +28,13 @@ app = FastAPI(
 def read_root() -> dict[str, str]:
     """Health check endpoint."""
     return {'message': 'OSINT Monitor API is running'}
+
+
+@app.get('/health')
+def health_check(db: Annotated[Session, Depends(get_db)]) -> dict[str, str]:
+    """Verify database connectivity."""
+    try:
+        db.execute(text('SELECT 1'))
+    except Exception:
+        return {'status': 'error', 'database': 'disconnected'}
+    return {'status': 'ok', 'database': 'connected'}

@@ -1,0 +1,10 @@
+sources:
+  - name: TechCrunch
+    url: https://techcrunch.com/feed/
+    category: tech
+    language: en
+
+  - name: The Hacker News
+    url: https://feeds.feedburner.com/TheHackersNews
+    category: security
+    language: en

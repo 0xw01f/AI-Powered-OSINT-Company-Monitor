@@ -8,6 +8,7 @@ from typing import TYPE_CHECKING
 
 from backend.database.models import Article, ArticleStatus, Entity
 from backend.nlp import extract_entities_gliner, extract_entities_hybrid, extract_entities_spacy
+from backend.services.events import detect_events_for_article
 
 if TYPE_CHECKING:
     from collections.abc import Callable
@@ -85,6 +86,14 @@ def analyze_articles(
             'ner_method': method,
             'entities_count': len(entities),
         }
+
+        # Detect business events for this article
+        try:
+            events = detect_events_for_article(db, article)
+            for event in events:
+                db.add(event)
+        except Exception:
+            logger.exception('Event detection failed for article %d', article.id)
 
     db.commit()
     duration = (time.perf_counter() - start_time) * 1000

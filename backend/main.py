@@ -8,7 +8,7 @@ from fastapi import Depends, FastAPI
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from backend.api import router, sources_router
+from backend.api import events_router, router, sources_router
 from backend.database import get_db, init_db
 from backend.database.session import SessionLocal
 from backend.scheduler import start_scheduler, stop_scheduler
@@ -35,6 +35,7 @@ app = FastAPI(
 )
 app.include_router(router)
 app.include_router(sources_router)
+app.include_router(events_router)
 
 
 @app.get('/')

@@ -58,6 +58,10 @@ class Article(Base):
         back_populates='article',
         cascade='all, delete-orphan',
     )
+    events: Mapped[list[Event]] = relationship(
+        back_populates='article',
+        cascade='all, delete-orphan',
+    )
 
 
 class Entity(Base):
@@ -74,6 +78,46 @@ class Entity(Base):
     type: Mapped[str] = mapped_column(String(50), nullable=False)
 
     article: Mapped[Article] = relationship(back_populates='entities')
+
+
+class EventType(enum.StrEnum):
+    """Type of business event detected in an article."""
+
+    ACQUISITION = 'acquisition'
+    PARTNERSHIP = 'partnership'
+    FUNDING = 'funding'
+    CYBER_INCIDENT = 'cyber_incident'
+    LAWSUIT = 'lawsuit'
+    PRODUCT_LAUNCH = 'product_launch'
+    HIRING = 'hiring'
+    LAYOFFS = 'layoffs'
+    UNKNOWN = 'unknown'
+
+
+class Event(Base):
+    """Business event linked to an article and a company."""
+
+    __tablename__ = 'events'
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    article_id: Mapped[int] = mapped_column(
+        ForeignKey('articles.id'),
+        nullable=False,
+    )
+    company_name: Mapped[str] = mapped_column(Text, nullable=False)
+    event_type: Mapped[EventType] = mapped_column(
+        Enum(EventType),
+        default=EventType.UNKNOWN,
+        nullable=False,
+    )
+    confidence: Mapped[str | None] = mapped_column(String(10))
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        nullable=False,
+    )
+
+    article: Mapped[Article] = relationship(back_populates='events')
 
 
 class MonitoredCompany(Base):

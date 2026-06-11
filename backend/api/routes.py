@@ -18,6 +18,8 @@ from backend.services.monitor import (
     remove_monitored_company,
     search_articles_by_company,
 )
+from backend.database.models import EventType
+from backend.services.events import get_event_summary, get_events
 from backend.services.ner import analyze_articles
 from backend.services.scraper import scrape_pending_articles
 
@@ -28,9 +30,16 @@ router = APIRouter(prefix='/collect', tags=['collect'])
 def collect_rss_endpoint(
     db: Annotated[Session, Depends(get_db)],
     limit_per_source: int = 20,
+    max_sources: int = 20,
+    min_priority: int | None = None,
 ) -> dict[str, str | int]:
-    """Trigger RSS collection from all configured sources."""
-    result = collect_rss(db, limit_per_source=limit_per_source)
+    """Trigger RSS collection from active sources (prioritized)."""
+    result = collect_rss(
+        db,
+        limit_per_source=limit_per_source,
+        max_sources=max_sources,
+        min_priority=min_priority,
+    )
     return {
         'status': 'success',
         'inserted': result['inserted'],
@@ -151,3 +160,57 @@ def monitor_alerts(
 def scheduler_status() -> dict[str, Any]:
     """Return background scheduler status."""
     return get_scheduler_status()
+
+
+# ---- Events router ----
+events_router = APIRouter(prefix='/events', tags=['events'])
+
+
+@events_router.get('/')
+def list_events(
+    db: Annotated[Session, Depends(get_db)],
+    company: str | None = None,
+    event_type: str | None = None,
+    limit: int = 50,
+) -> list[dict[str, str | int | None]]:
+    """List detected business events with optional filters."""
+    etype = EventType(event_type) if event_type else None
+    rows = get_events(db, company=company, event_type=etype, limit=limit)
+    return [
+        {
+            'id': e.id,
+            'article_id': e.article_id,
+            'company_name': e.company_name,
+            'event_type': e.event_type.value,
+            'confidence': e.confidence,
+            'created_at': e.created_at.isoformat() if e.created_at else None,
+        }
+        for e in rows
+    ]
+
+
+@events_router.get('/summary')
+def events_summary(db: Annotated[Session, Depends(get_db)]) -> dict[str, int]:
+    """Return event counts per type."""
+    return get_event_summary(db)
+
+
+@events_router.get('/by-company')
+def events_by_company(
+    db: Annotated[Session, Depends(get_db)],
+    name: str,
+    limit: int = 20,
+) -> list[dict[str, str | int | None]]:
+    """List events for a specific company."""
+    rows = get_events(db, company=name, limit=limit)
+    return [
+        {
+            'id': e.id,
+            'article_id': e.article_id,
+            'company_name': e.company_name,
+            'event_type': e.event_type.value,
+            'confidence': e.confidence,
+            'created_at': e.created_at.isoformat() if e.created_at else None,
+        }
+        for e in rows
+    ]

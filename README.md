@@ -1,83 +1,196 @@
 # AI-Powered OSINT Company Monitor
 
-A platform that automatically monitors a company and produces actionable summaries from public data.
+An automated OSINT platform that monitors companies through public RSS feeds and web sources, extracts named entities (companies, products, technologies, people…), and alerts on mentions of watched companies.
+
+## What it does
+
+1. **RSS Collection** — Reads 360+ pre-configured RSS sources (security, regulation, tech, finance, press…), filters by priority, and stores articles in PostgreSQL.
+2. **Web Scraping** — For articles without full content, Playwright + BeautifulSoup extracts the article body (`<article>`, `<main>`, or full body fallback).
+3. **NER (Entity Extraction)** — Hybrid pipeline:
+   - **spaCy** filters relevant paragraphs (~5 ms)
+   - **GLiNER** zero-shot NER refines entity types (~150 ms)
+   - Combined result: ~50 ms with custom labels (Company, Product, Technology, Person, Financial Amount, Location)
+4. **Monitoring** — Search articles by company, maintain a watchlist, and get recent alerts.
+5. **Scheduler** — APScheduler runs RSS collection (every 30 min), scraping (15 min), and NER analysis (15 min) automatically.
 
 ## Stack
 
 | Tool | Purpose |
-| --- | --- |
-| [uv](https://docs.astral.sh/uv/) | Fast dependency & virtualenv management |
-| [FastAPI](https://fastapi.tiangolo.com/) | Web framework |
-| [SQLAlchemy](https://www.sqlalchemy.org/) | ORM |
-| [PostgreSQL](https://www.postgresql.org/) | Database |
-| [Playwright](https://playwright.dev/python/) | Web scraping |
-| [OpenAI](https://platform.openai.com/) | AI analysis |
-| [pandas](https://pandas.pydata.org/) | Data manipulation |
-| [feedparser](https://pypi.org/project/feedparser/) | RSS feed parsing |
+|------|---------|
+| [uv](https://docs.astral.sh/uv/) | Dependency & virtualenv management |
+| [FastAPI](https://fastapi.tiangolo.com/) | Web API |
+| [SQLAlchemy 2.0](https://www.sqlalchemy.org/) | ORM |
+| [PostgreSQL 16](https://www.postgresql.org/) | Database |
+| [Playwright](https://playwright.dev/python/) | Headless web scraping |
+| [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/) | HTML parsing |
+| [spaCy](https://spacy.io/) + [GLiNER](https://github.com/urchade/GLiNER) | Named Entity Recognition |
+| [APScheduler](https://apscheduler.readthedocs.io/) | Background job scheduler |
+| [feedparser](https://pypi.org/project/feedparser/) | RSS/Atom parsing |
 | [Ruff](https://docs.astral.sh/ruff/) | Linter + formatter |
-| [Mypy](https://mypy.readthedocs.io/) | Static type checking |
-| [Pytest](https://docs.pytest.org/) | Test runner |
-| [pre-commit](https://pre-commit.com/) | Git hooks orchestration |
+| [Mypy](https://mypy.readthedocs.io/) | Static type checking (strict) |
+| [Pytest](https://docs.pytest.org/) | Test runner (60+ tests) |
 
 ## Requirements
 
-- Python **3.13+**
-- [uv](https://docs.astral.sh/uv/getting-started/installation/)
-- Docker & Docker Compose (for PostgreSQL)
+- **Python 3.13+**
+- **[uv](https://docs.astral.sh/uv/getting-started/installation/)** (package manager)
+- **Docker & Docker Compose** (for PostgreSQL)
+- **Git Bash / WSL / Linux/macOS** (for shell scripts)
 
-## Getting started
+## Quick start
 
-```sh
-# 1. Start PostgreSQL
+```bash
+# 1. Clone
+git clone <repo-url>
+cd AI-Powered-OSINT-Company-Monitor
+
+# 2. Start PostgreSQL
 docker compose up -d
 
-# 2. Install dependencies and dev tools
+# 3. Install Python dependencies
 uv sync
 
-# 3. Install git hooks
-uv run pre-commit install
+# 4. Install spaCy language models (required for NER)
+uv run python -m spacy download en_core_web_sm
+uv run python -m spacy download fr_core_news_sm
+
+# 5. Start the API server
+uv run uvicorn backend.main:app --host 127.0.0.1 --port 8000
 ```
 
-## Daily commands
+The first startup will:
+- Create database tables automatically
+- Import 360 sources from `backend/config/sources.csv`
+- Start the background scheduler
+- Download the GLiNER model from HuggingFace (first NER call only, ~500 MB, cached afterwards)
 
-```sh
-uv run fastapi dev backend/main.py   # run the API
-uv run ruff check .                  # lint
-uv run ruff format .                 # format
-uv run mypy                          # type-check
-uv run pytest                        # tests
-uv run pytest --cov                  # tests with coverage
+## Test the API
+
+With the server running, open another terminal and run:
+
+```bash
+# Health check
+curl http://127.0.0.1:8000/health
+# → {"status":"ok","database":"connected"}
+
+# List high-priority active sources (security & regulation)
+curl "http://127.0.0.1:8000/sources/?active_only=true&min_priority=95"
+
+# Trigger RSS collection on top-5 priority sources
+curl -X POST "http://127.0.0.1:8000/collect/rss?max_sources=5&limit_per_source=10"
+# → {"status":"success","inserted":N,"skipped":M}
+
+# Trigger scraping for pending articles
+curl -X POST "http://127.0.0.1:8000/collect/scrape?batch_size=10"
+
+# Trigger NER analysis (hybrid = spaCy + GLiNER)
+curl -X POST "http://127.0.0.1:8000/collect/analyze?method=hybrid&batch_size=10"
+
+# Benchmark NER methods on a sample text
+curl -X POST "http://127.0.0.1:8000/collect/benchmark" \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Apple Inc. announced a partnership with OpenAI in San Francisco.", "language": "en"}'
+
+# Watchlist: add a company
+curl -X POST "http://127.0.0.1:8000/collect/monitor/watch?name=Apple"
+
+# Watchlist: list watched companies
+curl http://127.0.0.1:8000/collect/monitor/watched
+
+# Search articles mentioning a company
+curl "http://127.0.0.1:8000/collect/monitor/search?name=Apple&limit=10"
+
+# Get recent alerts (articles mentioning watched companies, last 24h)
+curl "http://127.0.0.1:8000/collect/monitor/alerts?hours=24&limit=20"
+
+# Scheduler status
+curl http://127.0.0.1:8000/collect/scheduler/status
 ```
 
-## Layout
+Or run the provided test script:
+
+```bash
+bash scripts/test_api.sh
+```
+
+## Interactive docs
+
+Once the server is running, open your browser at:
+
+- **Swagger UI** — http://127.0.0.1:8000/docs
+- **ReDoc** — http://127.0.0.1:8000/redoc
+
+## Run tests
+
+```bash
+# All tests (SQLite in-memory, no Docker required)
+uv run pytest
+
+# With coverage report
+uv run pytest --cov
+
+# Fast mode (parallel)
+uv run pytest -x --timeout=30 -q
+```
+
+## Project layout
 
 ```text
 .
 ├── backend/
-│   ├── app/           # source package
-│   ├── scrapers/      # web scrapers
-│   ├── services/      # business logic
-│   ├── database/      # DB models & sessions
-│   └── main.py        # FastAPI entry point
-├── frontend/          # dashboard (future)
+│   ├── main.py              # FastAPI entry point (lifespan: DB init → import sources → scheduler)
+│   ├── api/
+│   │   ├── routes.py        # /collect/* endpoints (RSS, scrape, analyze, monitor, scheduler)
+│   │   └── sources.py       # /sources/* CRUD endpoints
+│   ├── collectors/
+│   │   └── rss.py           # RSS feed fetching & article deduplication (SHA256 hash)
+│   ├── database/
+│   │   ├── models.py        # Article, Entity, Source, MonitoredCompany
+│   │   └── session.py       # SQLAlchemy engine & SessionLocal
+│   ├── nlp/
+│   │   ├── spacy_ner.py     # spaCy entity extractor
+│   │   ├── gliner_ner.py    # GLiNER zero-shot NER
+│   │   ├── hybrid_ner.py    # Hybrid pipeline (GOAT)
+│   │   └── benchmark.py     # Comparative benchmark
+│   ├── scrapers/
+│   │   └── article.py       # Playwright + BeautifulSoup article extractor
+│   ├── services/
+│   │   ├── sources.py       # CSV import + CRUD logic
+│   │   ├── scraper.py       # Scrape pending articles service
+│   │   ├── ner.py           # NER analysis service
+│   │   └── monitor.py       # Watchlist & alerts
+│   ├── scheduler.py         # APScheduler (RSS 30min, scrape 15min, NER 15min)
+│   └── config/
+│       └── sources.csv      # 360+ RSS sources with metadata
 ├── tests/
-│   └── unit/
-├── docker-compose.yml # PostgreSQL service
+│   └── unit/                # 60 tests covering all layers
+├── scripts/
+│   └── test_api.sh          # Quick curl-based API smoke tests
+├── docker-compose.yml       # PostgreSQL 16
 ├── pyproject.toml
 └── uv.lock
 ```
 
-## Commit convention
+## Configuration
 
-Commits must follow [Conventional Commits](https://www.conventionalcommits.org/):
+No `.env` file is required for local development. Defaults:
 
-```text
-feat(scope): add new capability
-fix: correct off-by-one in parser
-chore: bump dependencies
+| Variable | Default |
+|----------|---------|
+| `DATABASE_URL` | `postgresql://osint:osint@localhost:5432/osint_monitor` |
+
+If port `8000` is already in use, start the server on another port:
+
+```bash
+uv run uvicorn backend.main:app --host 127.0.0.1 --port 8001
 ```
 
-Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`.
+## Important notes
+
+- **APScheduler** is MVP-only. For production, replace with **Celery + Redis**.
+- **First NER call is slow** (~30-60 s) because GLiNER downloads `urchade/gliner_medium-v2.1` from HuggingFace. Subsequent calls use the local cache.
+- **RSS collection** is capped to `max_sources=20` by default to avoid timeouts. The scheduler processes sources in priority order.
+- **Tests** use an in-memory SQLite database and mock external HTTP calls, so they run offline and fast (~10 s).
 
 ## License
 

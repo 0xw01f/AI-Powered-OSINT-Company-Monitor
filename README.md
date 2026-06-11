@@ -1,5 +1,17 @@
 # AI-Powered OSINT Company Monitor
 
+[![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-316192?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![spaCy](https://img.shields.io/badge/spaCy-3.8-09A3D5?logo=spacy&logoColor=white)](https://spacy.io/)
+[![GLiNER](https://img.shields.io/badge/GLiNER-NER-FF6F00?logo=huggingface&logoColor=white)](https://github.com/urchade/GLiNER)
+[![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white)](https://playwright.dev/python/)
+[![APScheduler](https://img.shields.io/badge/APScheduler-3.11-9cf)](https://apscheduler.readthedocs.io/)
+[![Ruff](https://img.shields.io/badge/Ruff-261230?logo=ruff&logoColor=white)](https://docs.astral.sh/ruff/)
+[![Mypy](https://img.shields.io/badge/mypy-strict-2A6DB2?logo=python&logoColor=white)](https://mypy.readthedocs.io/)
+[![Pytest](https://img.shields.io/badge/pytest-79+_tests-0A9EDC?logo=pytest&logoColor=white)](https://docs.pytest.org/)
+[![License](https://img.shields.io/badge/License-GPL--3.0-orange)](LICENSE)
+
 An automated OSINT platform that monitors companies through public RSS feeds and web sources, extracts named entities (companies, products, technologies, people…), and alerts on mentions of watched companies.
 
 ## What it does

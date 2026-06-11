@@ -4,8 +4,11 @@ from __future__ import annotations
 
 import calendar
 import hashlib
+import logging
 from datetime import datetime, timezone
 from typing import TYPE_CHECKING, Any
+from urllib.error import HTTPError, URLError
+from urllib.request import urlopen
 
 import feedparser
 
@@ -13,6 +16,8 @@ from backend.database.models import Article, ArticleStatus, Source
 
 if TYPE_CHECKING:
     from sqlalchemy.orm import Session
+
+logger = logging.getLogger(__name__)
 
 
 def _parse_entry(entry: Any) -> dict[str, Any]:
@@ -32,25 +37,40 @@ def _parse_entry(entry: Any) -> dict[str, Any]:
     }
 
 
-def fetch_rss_feed(url: str) -> list[dict[str, Any]]:
-    """Fetch and parse an RSS feed, returning structured entries."""
-    parsed = feedparser.parse(url)
-    return [_parse_entry(entry) for entry in parsed.entries]
+def fetch_rss_feed(url: str, timeout: int = 15) -> list[dict[str, Any]]:
+    """Fetch and parse an RSS feed safely, returning structured entries."""
+    try:
+        with urlopen(url, timeout=timeout) as response:  # noqa: S310
+            content = response.read()
+        parsed = feedparser.parse(content)
+        if hasattr(parsed, 'bozo') and parsed.bozo:
+            logger.warning('Feed %s has errors: %s', url, parsed.bozo_exception)
+        return [_parse_entry(entry) for entry in parsed.entries]
+    except (URLError, HTTPError, TimeoutError, OSError) as exc:
+        logger.error('Failed to fetch RSS %s: %s', url, exc)
+        return []
+    except Exception as exc:  # noqa: BLE001
+        logger.error('Unexpected error fetching RSS %s: %s', url, exc)
+        return []
 
 
 def collect_rss(
     db: Session,
     limit_per_source: int = 20,
+    max_sources: int = 20,
     min_priority: int | None = None,
 ) -> dict[str, int]:
     """Collect articles from active RSS sources in the database."""
-    query = db.query(Source).filter_by(active=True)
+    query = db.query(Source).filter_by(active=True).filter(Source.rss_available.is_(True))
     if min_priority is not None:
         query = query.filter(Source.priority >= min_priority)
-    sources = query.all()
+    # Sort by priority descending so most important sources are processed first
+    query = query.order_by(Source.priority.desc().nullslast())
+    sources = query.limit(max_sources).all()
 
     total_inserted = 0
     total_skipped = 0
+    seen_urls: set[str] = set()
 
     for source in sources:
         entries = fetch_rss_feed(source.url)
@@ -60,15 +80,21 @@ def collect_rss(
             if not url or not title:
                 continue
 
-            existing = db.query(Article).filter_by(url=url).first()
-            if existing:
+            normalized_url = url.strip()
+            if normalized_url in seen_urls:
                 total_skipped += 1
                 continue
 
-            content_hash = hashlib.sha256(url.encode()).hexdigest()[:32]
+            existing = db.query(Article).filter_by(url=normalized_url).first()
+            if existing:
+                total_skipped += 1
+                seen_urls.add(normalized_url)
+                continue
+
+            content_hash = hashlib.sha256(normalized_url.encode()).hexdigest()[:32]
             article = Article(
                 title=title,
-                url=url,
+                url=normalized_url,
                 source=source.name,
                 summary=entry.get('summary'),
                 published_at=entry.get('published_at'),
@@ -77,6 +103,7 @@ def collect_rss(
                 language=source.language,
             )
             db.add(article)
+            seen_urls.add(normalized_url)
             total_inserted += 1
 
     db.commit()
